@@ -16,11 +16,11 @@
     function playAudio() {
 		if (!playing) {
                         myMedia.play();	
-			document.getElementById('play').src = "images/pause.png";
+			//document.getElementById('play').src = "images/pause.png";
 			playing = true;	
 		} else {
 			myMedia.pause();
-                        document.getElementById('play').src = "images/play.png";    
+                        //document.getElementById('play').src = "images/play.png";    
                         playing = false; 
 		}
     }
@@ -28,7 +28,7 @@
     function stopAudio() {
 		myMedia.stop();
 		playing = false;
-                document.getElementById('play').src = "images/play.png";    
+                //document.getElementById('play').src = "images/play.png";    
 		document.getElementById('audio_position').innerHTML = "0.000 sec";
 	}
 
@@ -63,7 +63,7 @@
 	            },
 	            // error callback
 	            function(e) {
-	                console.log("Error getting pos=" + e);
+	                alert("Error getting pos=" + e);
 	            }
 	        );
 	    }, 1000);
@@ -75,7 +75,7 @@
  </script>
  <body onload="onLoad()">
    <h1>New Cordova 2.5 Audio Player</h1>
-   <h2>yet another change, local music added</h2>
+   <h2>yet another change v0.2, switched .js files order, add error alert, remove image references</h2>
    <p id="audio_position">0.000 sec</p>
    <p>
 	   <select id="playlist" onchange="updateMedia()">
